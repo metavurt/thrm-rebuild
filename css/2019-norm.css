@@ -1,6 +1,4 @@
 /*! based on modern-normalize | MIT License | https://github.com/sindresorhus/modern-normalize */
-/* Document
-   ========================================================================== */
 /**
  * fix box model
  */
@@ -18,7 +16,7 @@ html, body {
 }
 
 /**
- * get rid of body margin, adjust line height globally,
+ * get rid of body margin, adjust line-height globally,
  * improve consistency of default font in all browsers
  * https://github.com/sindresorhus/modern-normalize/issues/3
  */
@@ -47,7 +45,7 @@ body {
 }
 
 /**
- * Correct the font size and margin on `h1` elements within `section` and
+ * Adjust the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {

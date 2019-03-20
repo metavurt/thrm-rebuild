@@ -1,0 +1,63 @@
+form hr {
+    color: var(--light-gray);
+}
+
+fieldset>p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.5em 0;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-flex;
+    position: relative;
+    background-color: var(--white);
+    border: 2px solid var(--gray);
+    border-radius: 4px;
+    color: #666;
+    height: 1.5em;
+    width: 1.5em;
+    cursor: pointer;
+    margin-right: 7px;
+    outline: none;
+    align-items: center;
+}
+
+input[type=radio] {
+    border-radius: 50%;
+}
+
+input[type="radio"]:hover,
+input[type="checkbox"]:hover {
+    border-color: var(--blue);
+}
+
+input[type="checkbox"]:checked {
+    border-color: var(--blue);
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+input[type=checkbox]:checked::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    content: '\02143';
+    transform: scale(1.4) rotate(40deg) translateX(-0.1em);
+}
+
+input[type=checkbox]:disabled::before {
+    color: rgba(255, 255, 255, 0);
+}
+
+input[type=checkbox]:checked:disabled::before {
+    color: #bbb;
+    text-shadow: .05em 0 0 #bbb, -.05em 0 0 #bbb;
+}

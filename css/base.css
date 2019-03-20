@@ -123,8 +123,13 @@ h2 {
 h3 {
   font-size: 1.75rem;
   font-weight: normal;
-  /* margin: 0.5rem 0 1rem; */
   margin: 1.5rem 0 0rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  /* font-weight: normal;   */
+  margin: 0;
 }
 
 p {
@@ -222,30 +227,12 @@ summary::-webkit-details-marker {
     padding-right: 1rem;
   }
 
-
-  .flag-cn::before {
-    content: url('../images/flag/cn.png');
-  }
-
-  .flag-jp::before {
-    content: url('../images/flag/jp.png');
-  }
-
-  .flag-kr::before {
-    content: url('../images/flag/kr.png');
-  }
-
-  .flag-id::before {
-    content: url('../images/flag/id.png');
-  }
-
-  .flag-si::before {
-    content: url('../images/flag/si.png');
-  }
-
-  .flag-vn::before {
-    content: url('../images/flag/vn.png');
-  }
+.flag-cn::before { content: url('../images/flag/cn.png'); }
+.flag-jp::before { content: url('../images/flag/jp.png'); }
+.flag-kr::before { content: url('../images/flag/kr.png'); }
+.flag-id::before { content: url('../images/flag/id.png'); }
+.flag-si::before { content: url('../images/flag/si.png'); }
+.flag-vn::before { content: url('../images/flag/vn.png'); }
 
 summary::after {
   position: absolute;
@@ -320,16 +307,13 @@ button[type="submit"] {
 
 .header-search {
   transform: translateY(-5rem);
-  width: 55rem;
+  max-width: 55rem;
   margin: 0 auto;
 }
 
 
-form h4 {
-  margin: 5px 0 15px;
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
+details h3 {
+  font-size: 1.5rem;
 }
 
 fieldset {
@@ -368,6 +352,34 @@ textarea {
   max-width: 100%;
   resize: none;
 }
+
+input[type="submit"] {
+  width: 100%;
+  padding: 0.75em;
+  border-radius: 0.25em;
+  box-shadow: none;
+  border-width: 0;
+  /* border-color: var(--light-blue); */
+  background: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: var(--dark-blue);
+}
+
+  input[type="submit"].alternate {
+    border-width: 1px;
+    border-color: var(--blue);
+    background: var(--white);
+    color: var(--blue);    
+  }
+
+  input[type="submit"].alternate:hover {
+    background: var(--light-blue-fade);
+    color: var(--white);
+  }
 
 button[type="submit"] {
   cursor: pointer;
@@ -429,6 +441,7 @@ textarea:focus {
   padding: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   list-style-type: none;
   width: 100%;
   min-width: 40em;
@@ -625,6 +638,15 @@ textarea:focus {
   .product-specifications {
     max-width: 75rem;
     margin: 0 auto;
+  }
+
+.filter-container {
+  grid-column: 1;
+  grid-row: 1 / 8; /* incorrect but working */
+}
+
+  .filter-component {
+    padding: 1em;
   }
 
 .rma-grid {
