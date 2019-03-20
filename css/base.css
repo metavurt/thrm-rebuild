@@ -823,7 +823,7 @@ textarea:focus {
 
 
 
-
+/*********** HELPER CLASSES ***************/
 
 
 .text--xl { font-size: var(--text-xl); }
@@ -857,6 +857,10 @@ textarea:focus {
 
 .disable-scrolling {
   overflow: hidden;
+}
+
+.flex-inline {
+  display: inline-flex;
 }
 
 
