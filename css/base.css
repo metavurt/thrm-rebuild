@@ -154,6 +154,7 @@ details {
   position: relative;
   border: 1px solid rgba(0,0,0,.1);
   border-radius: 5px;
+  transition-duration: 0.5s;
 }
 
 h3 + details {
@@ -254,6 +255,21 @@ details[open] summary > span {
 
 details[open] summary::after {
   transform: rotate(0);
+}
+
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {
+    opacity: 0;
+    margin-top: -10px;
+  }
+  100%  {
+    opacity: 1;
+    margin-top: 0;
+  }
 }
 
 table {
