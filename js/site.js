@@ -114,8 +114,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         // current element
         let currentElement = mixerElements[i];
         
-        if(currentElement.classList.contains('element-hidden')) {
-          currentElement.classList.remove('element-hidden');
+        if(!currentElement.classList.contains('element-hidden')) {
+          currentElement.classList.add('element-hidden');
         }
 
 
@@ -129,10 +129,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
           console.log(currentElement.dataset[currentName], currentValue);
 
-          if( currentElement.dataset[currentName] !== currentValue) {
+          if( currentElement.dataset[currentName] == currentValue) {
             // if element is not already hidden, hide it
-            if(!currentElement.classList.contains('element-hidden')) {
-              currentElement.classList.add('element-hidden');
+            if(currentElement.classList.contains('element-hidden')) {
+              currentElement.classList.remove('element-hidden');
             }
           }
           // element default is VISIBLE
