@@ -22,8 +22,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+    
     <link rel="stylesheet" href="css/2019-norm.css">
+    
     <link rel="stylesheet" href="css/base.css">
+
     <link rel="stylesheet" href="css/weo3-forms.css">
 </head>
 
@@ -93,71 +96,68 @@
 
         <section class="content-vertical">
 
-            <p class="alert-large bg-yellow">USA and Canada only: For returns from other countries, call 219.362.6258 or email salesadmin@thermco.com for instructions.</p>
+            <p class="alert-large bg-yellow">USA and Canada only: For returns from other countries, call 219.362.6258 or
+                email salesadmin@thermco.com for instructions.</p>
 
             <div class="center-split">
 
                 <form>
                     <h3 class="with-underline">returned item questions</h3>
                     <hr>
-                    <p>What type of product are you returning? <sup class="required">*</sup></p>
-                    <fieldset>
-                        <p class="flex-inline">
-                            <input id="thermco" name="product" type="radio">
-                            <label for="thermco">Thermco Product</label>
-                        </p>
-                        <p class="flex-inline">
-                            <input id="component" name="product" type="radio">
-                            <label for="component">Component Part</label>
-                        </p>
+                    <p class="form-question">What type of product are you returning? <sup class="alert">*</sup></p>
+                    <fieldset class="form-grid">
+
+                        <input id="thermco" name="product" type="radio">
+                        <label for="thermco">Thermco Product</label>
+
+                        <input id="component" name="product" type="radio">
+                        <label for="component">Component Part</label>
 
 
-                        <input placeholder="Model Number" type="text" required>
-                        <input placeholder="Serial Number" type="text" required>
+                        <input placeholder="Model Number" type="text" class="form-grid-full-width" required>
 
-                        <div class="component-additional">
+                        <input placeholder="Serial Number" type="text" class="form-grid-full-width" required>
+
+
+                        <div class="component-additional form-grid-full-width">
                             <textarea placeholder="Describe part or part number " tabindex="5" required></textarea>
                         </div>
                     </fieldset>
 
-                    <p>Why are you returning this product? (The more detail the better)*</p>
+                    <p class="form-question">Why are you returning this product? (The more detail the better) <sup class="alert">*</sup></p>
                     <textarea name="thermco-reason" id="" cols="30" rows="10"></textarea>
-                    <fieldset>
-                        <p class="flex-inline">
-                            <input id="ship-ups" name="shipping" type="radio">
-                            <label for="ship-ups">UPS</label>                            
-                        </p>
-                        <p class="flex-inline">
-                            <input id="ship-common" name="shipping" type="radio">
-                            <label for="ship-common">Common Carrier</label>
-                        </p>
-                    </fieldset>
-                    <div class="ship-ups">
-                        <select>
-                            <option value="0">Please select</option>
-                            <option value="1">Red Next Day</option>
-                            <option value="2">Blue 2 Day</option>
-                            <option value="3">Ground</option>
-                        </select>
-                        <fieldset>
-                            <input placeholder="UPS Account Number" type="text">
-                        </fieldset>
-                    </div>
-                    <div class="ship-common">
-                        <fieldset>
 
-                            <p class="flex-inline">
+                    <p class="form-question">How are you shipping this back to us? <sup class="alert">*</sup></p>
+                    <fieldset class="form-grid">
+                        <input id="ship-ups" name="shipping" type="radio">
+                        <label for="ship-ups">UPS</label>
+                    
+                        <input id="ship-common" name="shipping" type="radio">
+                        <label for="ship-common">Common Carrier</label>
+                    
+                        <div class="ship-ups form-grid-full-width">
+                            <select>
+                                <option value="0">Please select</option>
+                                <option value="1">Red Next Day</option>
+                                <option value="2">Blue 2 Day</option>
+                                <option value="3">Ground</option>
+                            </select>
+                            <fieldset>
+                                <input placeholder="UPS Account Number" type="text">
+                            </fieldset>
+                        </div>
+                        <div class="ship-common form-grid-full-width">
+                            <p class="form-question">Which common carrier? <sup class="alert">*</sup></p>
+                            <fieldset class="form-grid">
                                 <input id="ship-decide-thermco" name="shipping-decision" type="radio">
                                 <label for="ship-decide-thermco">Let ThermCo decide</label>
-                            </p>
 
-                            <p class="flex-inline">
                                 <input id="ship-decide-specify" name="shipping-decision" type="radio">
                                 <label for="ship-decide-specify">Specific Carrier</label>
-                            </p>
-                        </fieldset>
-                    </div>
-                    <p>Who have you spoken with at Thermco about your RMA? *</p>
+                            </fieldset>
+                        </div>
+                    </fieldset>
+                    <p>Who have you spoken with at Thermco about your RMA? <sup class="alert">*</sup></p>
                     <select>
                         <option value="0">I have not spoken with anyone</option>
                         <option value="1">I have spoken with someone</option>

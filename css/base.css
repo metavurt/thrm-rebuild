@@ -22,6 +22,7 @@
   --light-gray: hsla(216, 19%, 95%, 1);
   --yellow: hsla(52, 100%, 50%, 1);
   --vague: hsla(240, 100%, 99%, 1);
+  --red: hsla(360, 100%, 40%, 1);
 
   --color-text: hsla(0, 0%, 9%, 1);
 
@@ -333,7 +334,7 @@ details h3 {
 }
 
 fieldset {
-  border: medium none !important;
+  border: medium none;
   margin: 0 0 10px;
   min-width: 100%;
   padding: 0;
@@ -419,6 +420,12 @@ button[type="submit"]:active {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+sup.alert {
+  font-weight: 700;
+  font-size: 1em;
+  vertical-align: text-bottom;
+}
+
 
 input:focus,
 textarea:focus {
@@ -427,19 +434,19 @@ textarea:focus {
 }
 
 ::-webkit-input-placeholder {
-  color: #888;
+  color: var(--gray);
 }
 
 :-moz-placeholder {
-  color: #888;
+  color: var(--gray);
 }
 
 ::-moz-placeholder {
-  color: #888;
+  color: var(--gray);
 }
 
 :-ms-input-placeholder {
-  color: #888;
+  color: var(--gray);
 }
 
 
@@ -815,9 +822,23 @@ textarea:focus {
 /* RMA */
 .component-additional {
   display: none;
+
+}
+
+.ship-ups,
+.ship-common {
+  display: none;
 }
 
 #component:checked ~ .component-additional {
+  display: block;
+}
+
+#ship-ups:checked ~ .ship-ups {
+  display: block;
+}
+
+#ship-common:checked ~ .ship-common {
   display: block;
 }
 
@@ -841,6 +862,8 @@ textarea:focus {
 .bg-vague { background: var(--vague); }
 
 .txt-white { color: var(--white); }
+
+.alert { color: var(--red); }
 
 .grid-breakout {
   grid-column: 1 / -1;
