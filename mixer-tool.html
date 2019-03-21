@@ -91,45 +91,38 @@
     <section class="product-grid">
 
         <div class="filter-container">
-          <form action="#" class="filter-component">
+          <form id="mixer-filter" class="filter-component">
             <h3>Filters</h3>
             <hr>
-            <fieldset>
-              <h4>Gases</h4>
-              <p>
-                <input type="checkbox" name="gases" id="2gas">
+            <fieldset class="form-grid">
+              <h4 class="form-grid-full-width">Gases</h4>
+                <input type="checkbox" name="gases" id="2gas" value="2">
                 <label for="2gas">2 gases</label>
-              </p>
-              <p>
-                <input type="checkbox" name="gases" id="3gas">
+
+                <input type="checkbox" name="gases" id="3gas" value="3">
                 <label for="3gas">3 gases</label>
-              </p>
             </fieldset>
-            
             <hr>
-          
-            <fieldset>
-              <h4>Max Flow Rate</h4>
-              <p>
-              <input type="checkbox" name="flow" id="F750">
-              <label for="F750">750</label>
-              </p>
-              <p>
-              <input type="checkbox" name="flow" id="F2k">
-              <label for="F2k">2000</label>
-              </p>
-              <p>
-              <input type="checkbox" name="flow" id="F5k">
-              <label for="F5k">5000</label>
-              </p>
-              <p>
-              <input type="checkbox" name="flow" id="F10k">
-              <label for="F10k">10000</label>
-              </p>
-              <p>
-              <input type="checkbox" name="flow" id="F20k">
-              <label for="F20k">20000</label>
-              </p>
+            <fieldset class="form-grid">
+              <h4 class="form-grid-full-width">Flow Rate</h4>
+
+              <input type="checkbox" name="flow" id="F350" value="350">
+              <label for="F350">0 - 350</label>              
+
+              <input type="checkbox" name="flow" id="F750" value="750">
+              <label for="F750">0 - 750</label>
+              
+              <input type="checkbox" name="flow" id="F2k" value="2000">
+              <label for="F2k">0 - 2000</label>
+
+              <input type="checkbox" name="flow" id="F5k" value="5000">
+              <label for="F5k">0 - 5000</label>
+
+              <input type="checkbox" name="flow" id="F10k" value="10000">
+              <label for="F10k">0 - 10000</label>
+
+              <input type="checkbox" name="flow" id="F20k" value="20000">
+              <label for="F20k">0 - 20000</label>
 
             </fieldset>
 
@@ -137,52 +130,142 @@
           </form>
         </div>
 
-        <a href="#" class="product-listing">
+        <a href="#" class="product-listing" data-gas="2" data-flow="750">
             <figure>
-            <img src="images/thermco-mixer.png" alt="" srcset="">
+            <img src="images/mixer-8500.jpg" alt="" srcset="">
             <figcaption>
-            <span class="text--xs">2 Gas Alarm</span><br>
-            <p class="text--lg">Model: 9502</p>
+            <span class="text--xs">2 Gas Mixer</span><br>
+            <p class="text--lg">Model: 8500</p>
+            </figcaption>
+            </figure>            
+        </a>        
+
+        <a href="#" class="product-listing" data-gas="2" data-flow="750">
+            <figure>
+                <img src="images/mixer-8505.jpg" alt="" srcset="">
+            <figcaption>
+            <span class="text--xs">2 Gas Mixer</span><br>
+            <p class="text--lg">Model: 8505</p>
             </figcaption>
             </figure>            
         </a>
 
-        <a href="#" class="product-listing">
+        <a href="#" class="product-listing" data-gas="2" data-flow="350">
             <figure>
-            <img src="images/thermco-mixer.png" alt="" srcset="">
+                <img src="images/mixer-9775.jpg" alt="" srcset="">
             <figcaption>
-            <span class="text--xs">2 gas alarm</span><br>
-            <p class="text--lg">Model: 9503</p>
+            <span class="text--xs">2 Gas Mixer</span><br>
+            <p class="text--lg">Model: 9775</p>
             </figcaption>
             </figure>            
         </a>
 
-        <a href="#" class="product-listing">
+        <a href="#" class="product-listing" data-gas="2" data-flow="750">
             <figure>
-            <img src="images/thermco-mixer.png" alt="" srcset="">
+                <img src="images/mixer-8510.jpg" alt="" srcset="">
             <figcaption>
-            <span class="text--xs">2 gas alarm</span><br>
-            <p class="text--lg">Model: XXXX</p>
+            <span class="text--xs">2 Gas Mixer</span><br>
+            <p class="text--lg">Model: 8510</p>
             </figcaption>
             </figure>            
         </a>
 
-        <a href="#" class="product-listing">
+        <a href="#" class="product-listing" data-gas="2" data-flow="750">
             <figure>
-            <img src="images/thermco-mixer.png" alt="" srcset="">
+                <img src="images/mixer-8515.jpg" alt="" srcset="">
             <figcaption>
-            <span class="text--xs">2 gas alarm</span><br>
-            <p class="text--lg">Model: ZZZZ</p>
+            <span class="text--xs">2 Gas Mixer</span><br>
+            <p class="text--lg">Model: 8515</p>
             </figcaption>
             </figure>            
         </a>
 
-        <a href="#" class="product-listing">
+        <a href="#" class="product-listing" data-gas="2" data-flow="2000">
             <figure>
-            <img src="images/thermco-mixer.png" alt="" srcset="">
+                <img src="images/mixer-6105.jpg" alt="" srcset="">
             <figcaption>
-            <span class="text--xs">2 gas alarm</span><br>
-            <p class="text--lg">Model: YYYY</p>
+            <span class="text--xs">2 Gas Mixer</span><br>
+            <p class="text--lg">Model: 6105</p>
+            </figcaption>
+            </figure>            
+        </a>
+
+        <a href="#" class="product-listing" data-gas="2" data-flow="2000">
+            <figure>
+                <img src="images/mixer-8105.jpg" alt="" srcset="">
+            <figcaption>
+            <span class="text--xs">2 Gas Mixer</span><br>
+            <p class="text--lg">Model: 8105</p>
+            </figcaption>
+            </figure>            
+        </a>
+
+        <a href="#" class="product-listing" data-gas="2" data-flow="2000">
+            <figure>
+            <img src="images/mixer-8106.jpg" alt="" srcset="">
+            <figcaption>
+            <span class="text--xs">2 Gas Mixer</span><br>
+            <p class="text--lg">Model: 8106</p>
+            </figcaption>
+            </figure>            
+        </a>
+
+        <a href="#" class="product-listing" data-gas="2" data-flow="2000">
+            <figure>
+            <img src="images/mixer-8300.jpg" alt="" srcset="">
+            <figcaption>
+            <span class="text--xs">2 Gas Mixer</span><br>
+            <p class="text--lg">Model: 8300</p>
+            </figcaption>
+            </figure>            
+        </a>
+
+        <a href="#" class="product-listing" data-gas="2" data-flow="5000">
+            <figure>
+            <img src="images/mixer-6205.jpg" alt="" srcset="">
+            <figcaption>
+            <span class="text--xs">2 Gas Mixer</span><br>
+            <p class="text--lg">Model: 6205</p>
+            </figcaption>
+            </figure>            
+        </a>
+
+        <a href="#" class="product-listing" data-gas="2" data-flow="5000">
+            <figure>
+            <img src="images/mixer-8205.jpg" alt="" srcset="">
+            <figcaption>
+            <span class="text--xs">2 Gas Mixer</span><br>
+            <p class="text--lg">Model: 8205</p>
+            </figcaption>
+            </figure>            
+        </a>
+
+        <a href="#" class="product-listing" data-gas="2" data-flow="10000">
+            <figure>
+            <img src="images/mixer-8305.jpg" alt="" srcset="">
+            <figcaption>
+            <span class="text--xs">2 Gas Mixer</span><br>
+            <p class="text--lg">Model: 8305</p>
+            </figcaption>
+            </figure>            
+        </a>
+
+        <a href="#" class="product-listing" data-gas="3" data-flow="750">
+            <figure>
+            <img src="images/mixer-8610.jpg" alt="" srcset="">
+            <figcaption>
+            <span class="text--xs">3 Gas Mixer</span><br>
+            <p class="text--lg">Model: 8610</p>
+            </figcaption>
+            </figure>            
+        </a>
+
+        <a href="#" class="product-listing" data-gas="3" data-flow="2000">
+            <figure>
+                <img src="images/mixer-8110.jpg" alt="" srcset="">
+            <figcaption>
+            <span class="text--xs">3 Gas Mixer</span><br>
+            <p class="text--lg">Model: 8110</p>
             </figcaption>
             </figure>            
         </a>
