@@ -136,3 +136,7 @@ select option {
 .form-grid-full-width {
     grid-column: 1 / -1;
 }
+
+.element-hidden {
+    display: none;
+}
