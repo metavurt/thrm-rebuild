@@ -62,11 +62,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
           }
         }
 
-        //console.log("allOptionsApplied", allApplied);
         filterElements(allApplied);
         
       }
-
     }
 
     function resetOptions() {
@@ -106,7 +104,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     function filterElements(options) {
 
-
       let currentOptions = options;
 
       for(let i=0; i<mixerElements.length; i++) {
@@ -118,16 +115,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
           currentElement.classList.add('element-hidden');
         }
 
-
         // loop thru options to find matches
         for(let x=0; x<currentOptions.length;x++) {
-          console.log("el, x", mixerElements[i], currentOptions[x][0]);
 
           let currentName = currentOptions[x][0];
           let currentValue = currentOptions[x][1];
-          //element.dataset[keyname]
-
-          console.log(currentElement.dataset[currentName], currentValue);
 
           if( currentElement.dataset[currentName] == currentValue) {
             // if element is not already hidden, hide it
@@ -139,7 +131,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
           // if currentelement.dataset.[x].value = currentOptions[x][i], is a match, LEAVE VISIBLE
           // else a false flag, so element should be hidden
           
-
         }
       }
 
@@ -159,25 +150,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
-
-/*
-  mapApp.addEventListener('click', function(e) {
-    if (e.target.matches('.card-front')) {
-      showMe(e.target, true);
-    }
-    if (e.target.matches('.card-back')) {
-      showMe(e.target, true);
-    }
-    if (e.target.matches('.dla-view-card')) {
-      showMe(e.target, false);
-    }
-    if(e.target.matches('.dla-map-ui-arrow')) {
-      flipCards();
-    }
-    if(e.target.matches('.dla-map-overlay-close')) {
-      if(currentAppView == 'neighborhood'){
-        closeFullMap();
-      }
-    }
-  }, false);
-  */
