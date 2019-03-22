@@ -337,6 +337,7 @@ table td {
 }
 
 /* @TODO - too vague, rename appropriately */
+/* @TODO - and move it to proper place in doc */
 .container {
   max-width: 400px;
   width: 100%;
@@ -492,6 +493,12 @@ textarea:focus {
   width: 200px;
   margin-left: 1rem;
 }
+
+/***********************
+  @global components
+    In this section: main nav, overlay nav, cookie nav, footer nav
+    header style upon scrolling, button styles/alternate
+***********************/
 
 .main-nav {
   margin: 0;
@@ -653,7 +660,20 @@ textarea:focus {
     color: var(--dark-blue);
   }
 
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  border-radius: 3px;
+  float: left;
+  margin-right: 1rem;
+  text-decoration: none;
+}  
 
+
+
+  /* @TODO: should be in page specific section */
 .product-grid {
   display: grid;
   width: 100%;
@@ -736,39 +756,10 @@ textarea:focus {
 }
 
 
-.btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.2rem;
-  border-radius: 3px;
-  float: left;
-  margin-right: 1rem;
-  text-decoration: none;
-}
 
-  .btn-blue {
-    background: var(--dark-blue);
-    color: var(--white);
-  }
 
-  .btn-white {
-    background: var(--light-gray);
-    color: var(--blue);
-    border-color: var(--blue);
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 3px;
-  }
 
-  .btn-reset {
-    border: 1px solid var(--blue);
-    padding: 0.5em;
-    margin: 1em 0;
-    color: var(--blue);
-    cursor: pointer;
-  }
-
+  /* @TODO: should be in helper section */
 .flex-group {
   display: flex;
   flex-direction: column;
@@ -781,6 +772,7 @@ textarea:focus {
   display: flex;
   flex-direction: column;
 }
+  /* @TODO: should be in helper section */
 
 .content-grey-wrapper {
   margin: 1rem 2rem;
@@ -788,10 +780,13 @@ textarea:focus {
   border-radius: 0.25rem;
   background: var(--light-gray);
 }
+  /* @TODO: should be in helper section */
 
 .content-vertical {
   flex-direction: column;
 }
+
+  /* @TODO: should be in page section */
 
 .homepage-flex-strip {
   padding-top: 1rem;
@@ -801,6 +796,7 @@ textarea:focus {
 .homepage-flex-strip > * {
   margin: 0 1rem 3rem 1rem;
 }
+  /* @TODO: should be in page section */
 
 .product-header {
   margin: 0;
@@ -867,6 +863,13 @@ textarea:focus {
   }
 
 
+/***********************
+  @page - these are page specific styles, either leverage using body ID
+          or a specific helper file that is found associated by page
+***********************/
+
+
+
 /* RMA */
 .component-additional {
   display: none;
@@ -891,7 +894,6 @@ textarea:focus {
 }
 
 
-
 /***********************
   @helpers
 ***********************/
@@ -912,6 +914,30 @@ textarea:focus {
 .bg-vague { background: var(--vague); }
 
 .txt-white { color: var(--white); }
+
+
+.btn-blue {
+  background: var(--dark-blue);
+  color: var(--white);
+}
+
+.btn-white {
+  background: var(--light-gray);
+  color: var(--blue);
+  border-color: var(--blue);
+  /* border-width: 1px;
+  border-style: solid;
+  border-radius: 3px; */
+}
+
+/* on mixer tool page */
+.btn-reset {
+  border: 1px solid var(--blue);
+  padding: 0.5em;
+  margin: 1em 0;
+  color: var(--blue);
+  cursor: pointer;
+}
 
 /* used only for sup asterisk on required form inputs */
 /* for now - 3.22.2019 */
