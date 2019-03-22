@@ -668,9 +668,20 @@ textarea:focus {
   grid-row: 1 / 8; /* incorrect but working */
 }
 
+  /* .filter-component {
+    padding: 1em;
+  } */
+
   .filter-component {
     padding: 1em;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 0.5em;
+    width: 100%;
+    grid-row-gap: 1em;
+    grid-template-rows: minmax(1em, auto);
   }
+
 
 .rma-grid {
   display: grid;
@@ -719,6 +730,14 @@ textarea:focus {
     border-width: 1px;
     border-style: solid;
     border-radius: 3px;
+  }
+
+  .btn-reset {
+    border: 1px solid var(--blue);
+    padding: 0.5em;
+    margin: 1em 0;
+    color: var(--blue);
+    cursor: pointer;
   }
 
 .flex-group {

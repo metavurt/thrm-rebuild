@@ -1,10 +1,14 @@
 .form-grid {
     display: grid;
-    grid-template-columns: min-content 1fr;
+    grid-template-columns: 1.5em 1fr;
     grid-column-gap: 0.5em;
     width: 100%;
     grid-row-gap: 1em;
     grid-template-rows: minmax(1em, auto);
+}
+
+fieldset {
+    display: contents;
 }
 
 form hr {
