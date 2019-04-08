@@ -367,7 +367,7 @@ details h3 {
 
 fieldset {
   border: medium none;
-  margin: 0 0 10px;
+  margin: 0 0 1em;
   min-width: 100%;
   padding: 0;
   width: 100%;
@@ -379,10 +379,10 @@ input[type="tel"],
 input[type="url"],
 textarea {
   width: 100%;
-  border: 1px solid #ccc;
-  background: #FFF;
-  margin: 0 0 5px;
-  padding: 15px;
+  border: 1px solid var(--light-blue);
+  background: var(--white);
+  padding: 1em;
+  border-radius: 0.25em;
 }
 
 input[type="text"]:hover,
@@ -768,6 +768,11 @@ textarea:focus {
     flex: 1 1 auto;
   }
 
+.flex-triplet fieldset {
+  width: 30%;
+}
+
+
 .flex-item-vertical {
   display: flex;
   flex-direction: column;
@@ -942,6 +947,11 @@ textarea:focus {
 /* used only for sup asterisk on required form inputs */
 /* for now - 3.22.2019 */
 .alert { color: var(--red); }
+
+.with-underline + hr {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
 
 
 /* @TODO: could possibly use flexbox percent/margin trick to do */

@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    
+
     <link rel="stylesheet" href="css/2019-norm.css">
-    
+
     <link rel="stylesheet" href="css/base.css">
 
     <link rel="stylesheet" href="css/weo3-forms.css">
@@ -102,7 +102,7 @@
             <div class="center-split">
 
                 <form>
-                    <h3 class="with-underline">returned item questions</h3>
+                    <h3 class="with-underline">Returned Item Questions</h3>
                     <hr>
                     <p class="form-question">What type of product are you returning? <sup class="alert">*</sup></p>
                     <fieldset class="form-grid">
@@ -113,10 +113,11 @@
                         <input id="component" name="product" type="radio">
                         <label for="component">Component Part</label>
 
+                        <label for="model-number" class="form-grid-full-width">Model Number</label>
+                        <input id="model-number" placeholder="Model Number" type="text" class="form-grid-full-width" required>
 
-                        <input placeholder="Model Number" type="text" class="form-grid-full-width" required>
-
-                        <input placeholder="Serial Number" type="text" class="form-grid-full-width" required>
+                        <label for="serial-number" class="form-grid-full-width">Serial Number</label>
+                        <input placeholder="Serial Number" id="serial-number" type="text" class="form-grid-full-width" required>
 
 
                         <div class="component-additional form-grid-full-width">
@@ -124,17 +125,18 @@
                         </div>
                     </fieldset>
 
-                    <p class="form-question">Why are you returning this product? (The more detail the better) <sup class="alert">*</sup></p>
+                    <p class="form-question">Why are you returning this product? (The more detail the better) <sup
+                            class="alert">*</sup></p>
                     <textarea name="thermco-reason" id="" cols="30" rows="10"></textarea>
 
                     <p class="form-question">How are you shipping this back to us? <sup class="alert">*</sup></p>
                     <fieldset class="form-grid">
                         <input id="ship-ups" name="shipping" type="radio">
                         <label for="ship-ups">UPS</label>
-                    
+
                         <input id="ship-common" name="shipping" type="radio">
                         <label for="ship-common">Common Carrier</label>
-                    
+
                         <div class="ship-ups form-grid-full-width">
                             <select>
                                 <option value="0">Please select</option>
@@ -162,57 +164,137 @@
                         <option value="0">I have not spoken with anyone</option>
                         <option value="1">I have spoken with someone</option>
                     </select>
-                    <h3 class="with-underline">customer's return address</h3>
+                    <br><br>
+                    <h3 class="with-underline">Customer's Return Address</h3>
                     <hr>
                     <fieldset>
-                        <input name="return-name" placeholder="Your name" type="text" required autofocus>
+                        <label for="return-name">Name <sup class="alert">*</sup></label>
+                        <input name="return-name" placeholder="Your Full Name" type="text" required autofocus>
                     </fieldset>
                     <fieldset>
-                        <input name="return-company-name" placeholder="type your company name (optional)" type="text"
+                        <label for="return-company-name">Company Name <sup class="alert">*</sup></label>
+                        <input name="return-company-name" placeholder="Company Name" type="text"
                             required>
                     </fieldset>
                     <fieldset>
+                        <label for="return-email">Email <sup class="alert">*</sup></label>
                         <input name="return-email" placeholder="Your Email Address" type="email" required>
                     </fieldset>
                     <fieldset>
-                        <input name="return-phone" placeholder="Your Phone Number (optional)" type="tel" required>
+                        <label for="return-phone">Phone Number <sup class="alert">*</sup></label>
+                        <input name="return-phone" placeholder="Your Phone Number" type="tel" required>
                     </fieldset>
                     <fieldset>
-                        <input name="return-fax" placeholder="Fax number" type="text">
+                        <label for="return-fax">Fax Number</label>
+                        <input name="return-fax" placeholder="Fax Number" type="text">
                     </fieldset>
 
                     <fieldset>
+                        <label for="return-street">Street Address</label>
                         <input name="return-street" placeholder="Street Address" type="text" required>
                     </fieldset>
 
                     <fieldset>
+                        <label for="return-street-second">Street Address (apt/suite/floor)</label>
                         <input name="return-street-second" placeholder="Street Address 2" type="text">
                     </fieldset>
-                    <div class="flex-group">
+                    <div class="flex-group flex-triplet">
                         <fieldset>
+                            <label for="return-city">City <sup class="alert">*</sup></label>                            
                             <input name="return-city" placeholder="City" type="text" required>
                         </fieldset>
 
                         <fieldset>
+                            <label for="return-state">State <sup class="alert">*</sup></label>
                             <input name="return-state" placeholder="State or Province" type="text" required>
                         </fieldset>
 
                         <fieldset>
+                            <label for="return-zip">Zipcode <sup class="alert">*</sup></label>                            
                             <input name="return-zip" placeholder="Zip / Postal Code" type="text" max="6" required>
                         </fieldset>
-
                     </div>
 
                     <fieldset>
+                        <label for="return-country">Country <sup class="alert">*</sup></label>
                         <input name="return-country" placeholder="Country" type="text" required>
                     </fieldset>
 
+                    <br><br>
+                    <h3 class="with-underline">Customer's Billing Address</h3>
+                    <hr>
+                    <p>
+                        <fieldset class="form-grid">
+                            <input type="checkbox" name="shipping-billing" id="shipping-billing-same">
+                            <label for="shipping-billing-same">Billing address is same as shipping address</label>                            
+                        </fieldset>
+                    </p>
                     <fieldset>
-                        <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+                        <label for="billing-name">Name <sup class="alert">*</sup></label>
+                        <input name="billing-name" placeholder="Billing Name" type="text" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <label for="billing-company-name">Company Name <sup class="alert">*</sup></label>
+                        <input name="billing-company-name" placeholder="Company Name" type="text" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="billing-email">Email <sup class="alert">*</sup></label>
+                        <input name="billing-email" placeholder="Billing Email Address" type="email" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="billing-phone">Phone <sup class="alert">*</sup></label>
+                        <input name="billing-phone" placeholder="Billing Phone Number" type="tel" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="billing-fax">Fax Number</label>
+                        <input name="billing-fax" id="billing-fax" placeholder="Billing Fax Number" type="text">
                     </fieldset>
 
+                    <fieldset>
+                        <label for="billing-street">Street Address <sup class="alert">*</sup></label>
+                        <input name="billing-street" placeholder="Street Address" type="text" required>
+                    </fieldset>
 
+                    <fieldset>
+                        <label for="billing-street">Street Address (apt/suite/floor)</label>
+                        <input name="billing-street-second" placeholder="Street Address 2" type="text">
+                    </fieldset>
+                    <div class="flex-group flex-triplet">
+                        <fieldset>
+                            <label for="billing-city">City <sup class="alert">*</sup></label>
+                            <input name="billing-city" placeholder="City" type="text" required>
+                        </fieldset>
 
+                        <fieldset>
+                            <label for="billing-state">State <sup class="alert">*</sup></label>
+                            <input name="billing-state" placeholder="State or Province" type="text" required>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="billing-zip">Zipcode <sup class="alert">*</sup></label>                            
+                            <input name="billing-zip" placeholder="Zip / Postal Code" type="text" max="6" required>
+                        </fieldset>
+                    </div>
+
+                    <fieldset>
+                        <label for="billing-country">Country <sup class="alert">*</sup></label>
+                        <input name="billing-country" placeholder="Country" type="text" required>
+                    </fieldset>
+
+                    <br><br>
+                    <h3 class="with-underline">Customer's Safety Promise</h3>
+                    <hr>
+                    <p>I certify that the item being returned on this RMA Request is Free of Harmful, Hazardous and/or Toxic Materials.</p>
+                    <fieldset>
+                        <label for="promise-name">Full Name <sup class="alert">*</sup></label>
+                        <input name="promise-name" placeholder="Your full name" type="text" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="promise-company-name">Organization <sup class="alert">*</sup></label>
+                        <input name="promise-company-name" placeholder="Company name" type="text" required>
+                    </fieldset>
+
+                    <input type="submit" value="Request RMA" class="btn btn-blue">
 
 
 

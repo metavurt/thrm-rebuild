@@ -1,14 +1,9 @@
-.form-grid {
-    display: grid;
-    grid-template-columns: 1.5em 1fr;
-    grid-column-gap: 0.5em;
-    width: 100%;
-    grid-row-gap: 1em;
-    grid-template-rows: minmax(1em, auto);
+form {
+    margin-bottom: 2rem;
 }
 
 fieldset {
-    display: contents;
+    display: block;
 }
 
 form hr {
@@ -131,6 +126,14 @@ select option {
     font-weight:normal;
 }
 
+.form-grid {
+    display: grid;
+    grid-template-columns: 1.5em 1fr;
+    grid-column-gap: 0.5em;
+    width: 100%;
+    grid-row-gap: 1em;
+    grid-template-rows: minmax(1em, auto);
+}
 
 
 .form-question {

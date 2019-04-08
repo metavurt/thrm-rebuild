@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const navOverlay = document.querySelector('.overlay-nav');
   const mixerFilter = document.querySelector('#mixer-filter');
 
+  const shippingBillingToggle = document.querySelector('#shipping-billing-same');
+
   let gasOptions;
   let flowOptions;
   let mixerElements;
@@ -16,6 +18,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     navOverlayButton.classList.toggle('overlay-toggle-open');
     navOverlay.classList.toggle('overlay-open');
     document.body.classList.toggle('disable-scrolling');
+  }
+
+  function billingToggle() {
+    let allBillingInputs = document.querySelectorAll("input[name^='billing-']");
+    if(shippingBillingToggle.checked) {
+      for(let i=0; i<allBillingInputs.length; i++) {
+        allBillingInputs[i].parentNode.style.display = 'none';
+      }
+    } else {
+      for(let i=0; i<allBillingInputs.length; i++) {
+        allBillingInputs[i].parentNode.style.display = 'block';
+      }
+    }
   }
 
 
@@ -140,6 +155,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   window.addEventListener('scroll', headerToggle);
   navOverlayButton.addEventListener('click', overlayToggle);
+
+  if(shippingBillingToggle) {
+    shippingBillingToggle.addEventListener('click', billingToggle);
+  }
 
   if(mixerFilter) {
     gasOptions = mixerFilter.querySelectorAll('input[name="gas"]');
