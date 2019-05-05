@@ -336,10 +336,19 @@ table td {
 	padding: 1rem;
 }
 
-
-.table-gas-mixer thead {
-  background: var(--light-blue);
+.table-test th {
+  background: var(--blue);
+  color: var(--white);
+  font-size: 1.25em;
+  border-bottom: none;
+  padding: 0.5em;
 }
+
+.table-test td:first-child {
+  width: 50%;
+}
+
+
 
 input[type="text"],
 input[type="email"],
