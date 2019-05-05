@@ -336,13 +336,9 @@ table td {
 	padding: 1rem;
 }
 
-/* @TODO - too vague, rename appropriately */
-/* @TODO - and move it to proper place in doc */
-.container {
-  max-width: 400px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
+
+.table-gas-mixer thead {
+  background: var(--light-blue);
 }
 
 input[type="text"],
